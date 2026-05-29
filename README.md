@@ -1,586 +1,292 @@
-\# 🚀 TaskFlow – Premium Task Management Application
-
-
+# 🚀 TaskFlow – Premium Task Management Application
 
 TaskFlow is a modern, full-stack Task Management Kanban application designed to streamline task organization and workflow management. Built with a premium React frontend and a scalable Node.js + Express backend, the application delivers a seamless user experience with secure authentication, dynamic task tracking, and real-time productivity insights.
 
+----------------------------------------------------------------------------------------------------------------------
 
+## 🌐 Live Application
 
-\---
-
-
-
-\## 🌐 Live Application
-
-
-
-\### Frontend
-
-
+### Frontend
 
 https://task-manager-pi-six.vercel.app
 
-
-
-\### Backend API
-
-
+### Backend API
 
 https://task-manager-3byf.onrender.com
 
-
-
-\### API Base URL
-
-
+### API Base URL
 
 https://task-manager-3byf.onrender.com/api
 
+------------------------------------------------------------------------------------------------------------------------
 
-
-\---
-
-
-
-\## 🔐 Demo Credentials
-
-
+## 🔐 Demo Credentials
 
 Use the following credentials to explore the application:
 
+Email: development@gmail.com
 
+Password: development@123
 
-\*\*Email:\*\* \[development@gmail.com](mailto:development@gmail.com)
+-------------------------------------------------------------------------------------------------------------------------
 
+## ✨ Key Features
 
+### 🔒 Authentication & Security
 
-\*\*Password:\*\* development@123
+* User Registration & Login
+* JWT Authentication
+* Protected Routes
+* Password Encryption using bcryptjs
+* Secure Authorization Middleware
+* Persistent User Sessions
 
+### 📋 Task Management
 
+* Create Tasks
+* Edit Tasks
+* Delete Tasks
+* Update Task Status
+* Manage Task Priorities
+* Dynamic Task Search
+* Priority-Based Filtering
 
-\---
-
-
-
-\## ✨ Key Features
-
-
-
-\### 🔒 Authentication \& Security
-
-
-
-\* User Registration \& Login
-
-\* JWT Authentication
-
-\* Protected Routes
-
-\* Password Encryption using bcryptjs
-
-\* Secure Authorization Middleware
-
-\* Persistent User Sessions
-
-
-
-\### 📋 Task Management
-
-
-
-\* Create Tasks
-
-\* Edit Tasks
-
-\* Delete Tasks
-
-\* Update Task Status
-
-\* Manage Task Priorities
-
-\* Dynamic Task Search
-
-\* Priority-Based Filtering
-
-
-
-\### 🧩 Kanban Workflow
-
-
+### 🧩 Kanban Workflow
 
 Organize tasks efficiently using a drag-and-drop inspired Kanban board:
 
+* 📝 To Do
+* 🚧 In Progress
+* ✅ Completed
 
-
-\* 📝 To Do
-
-\* 🚧 In Progress
-
-\* ✅ Completed
-
-
-
-\### 📊 Dashboard Analytics
-
-
+### 📊 Dashboard Analytics
 
 Track productivity with real-time metrics:
 
+* Total Tasks
+* Pending Tasks
+* Tasks Under Review
+* Completed Tasks
 
+### 🎨 Modern User Interface
 
-\* Total Tasks
+* Fully Responsive Design
+* Clean and Professional Layout
+* Modern Modal Components
+* Interactive Kanban Board
+* Smooth User Experience
+* Custom Confirmation Dialogs
 
-\* Pending Tasks
+----------------------------------------------------------------------------------------------------------------------
 
-\* Tasks Under Review
+## 🛠️ Technology Stack
 
-\* Completed Tasks
+### Frontend
 
+* React.js
+* Vite
+* Tailwind CSS
+* Axios
+* Lucide React Icons
 
+### Backend
 
-\### 🎨 Modern User Interface
+* Node.js
+* Express.js
+* Sequelize ORM
+* MySQL
 
+### Authentication & Validation
 
+* JSON Web Tokens (JWT)
+* bcryptjs
+* express-validator
 
-\* Fully Responsive Design
+--------------------------------------------------------------------------------------------------------------------
 
-\* Clean and Professional Layout
-
-\* Modern Modal Components
-
-\* Interactive Kanban Board
-
-\* Smooth User Experience
-
-\* Custom Confirmation Dialogs
-
-
-
-\---
-
-
-
-\## 🛠️ Technology Stack
-
-
-
-\### Frontend
-
-
-
-\* React.js
-
-\* Vite
-
-\* Tailwind CSS
-
-\* Axios
-
-\* Lucide React Icons
-
-
-
-\### Backend
-
-
-
-\* Node.js
-
-\* Express.js
-
-\* Sequelize ORM
-
-\* MySQL
-
-
-
-\### Authentication \& Validation
-
-
-
-\* JSON Web Tokens (JWT)
-
-\* bcryptjs
-
-\* express-validator
-
-
-
-\---
-
-
-
-\## 📁 Project Structure
-
-
+## 📁 Project Structure
 
 ```bash
-
-Task\_manager\_app/
-
+Task_manager_app/
 │
-
 ├── backend/
-
 │   ├── config/
-
 │   ├── controllers/
-
 │   ├── middleware/
-
 │   ├── models/
-
 │   ├── routes/
-
 │   ├── utils/
-
 │   ├── server.js
-
 │   └── package.json
-
 │
-
 ├── frontend/
-
 │   ├── public/
-
 │   ├── src/
-
 │   │   ├── assets/
-
 │   │   ├── components/
-
 │   │   ├── pages/
-
 │   │   ├── services/
-
 │   │   └── App.jsx
-
 │   └── package.json
-
 │
-
 ├── README.md
-
 └── .gitignore
-
 ```
 
+------------------------------------------------------------------------------------------------------------------------
 
+## ⚙️ Local Development Setup
 
-\---
-
-
-
-\## ⚙️ Local Development Setup
-
-
-
-\### Prerequisites
-
-
+### Prerequisites
 
 Make sure the following are installed:
 
+* Node.js
+* MySQL
+* Git
 
+-------------------------------------------------------------------------------------------------------------------------
 
-\* Node.js
+### Backend Setup
 
-\* MySQL
-
-\* Git
-
-
-
-\---
-
-
-
-\### Backend Setup
-
-
-
-\#### 1. Navigate to Backend Directory
-
-
+#### 1. Navigate to Backend Directory
 
 ```bash
-
 cd backend
-
 ```
 
-
-
-\#### 2. Install Dependencies
-
-
+#### 2. Install Dependencies
 
 ```bash
-
 npm install
-
 ```
 
-
-
-\#### 3. Configure Environment Variables
-
-
+#### 3. Configure Environment Variables
 
 Create a `.env` file inside the backend folder:
 
-
-
 ```env
-
 PORT=5000
+NODE_ENV=development
 
-NODE\_ENV=development
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=
+DB_NAME=task_manager
+DB_PORT=3306
 
-
-
-DB\_HOST=localhost
-
-DB\_USER=root
-
-DB\_PASSWORD=
-
-DB\_NAME=task\_manager
-
-DB\_PORT=3306
-
-
-
-JWT\_SECRET=your\_jwt\_secret\_key
-
+JWT_SECRET=your_jwt_secret_key
 ```
 
-
-
-\#### 4. Start Backend Server
-
-
+#### 4. Start Backend Server
 
 ```bash
-
 npm start
-
 ```
-
-
 
 Backend will run at:
 
-
-
 ```text
-
 http://localhost:5000
-
 ```
 
+---------------------------------------------------------------------------------------------------------------------
 
+### Frontend Setup
 
-\---
-
-
-
-\### Frontend Setup
-
-
-
-\#### 1. Navigate to Frontend Directory
-
-
+#### 1. Navigate to Frontend Directory
 
 ```bash
-
 cd frontend
-
 ```
 
-
-
-\#### 2. Install Dependencies
-
-
+#### 2. Install Dependencies
 
 ```bash
-
 npm install
-
 ```
 
-
-
-\#### 3. Configure Environment Variables
-
-
+#### 3. Configure Environment Variables
 
 Create a `.env` file:
 
-
-
 ```env
-
-VITE\_API\_BASE\_URL=http://localhost:5000/api
-
+VITE_API_BASE_URL=http://localhost:5000/api
 ```
 
-
-
-\#### 4. Start Frontend
-
-
+#### 4. Start Frontend
 
 ```bash
-
 npm run dev
-
 ```
-
-
 
 Frontend will run at:
 
-
-
 ```text
-
 http://localhost:5173
-
 ```
 
+-----------------------------------------------------------------------------------------------------------------
 
+## 📡 API Endpoints
 
-\---
-
-
-
-\## 📡 API Endpoints
-
-
-
-\### Authentication
-
-
+### Authentication
 
 | Method | Endpoint           | Description   |
-
 | ------ | ------------------ | ------------- |
-
 | POST   | /api/auth/register | Register User |
-
 | POST   | /api/auth/login    | Login User    |
 
-
-
-\### Tasks
-
-
+### Tasks
 
 | Method | Endpoint       | Description   |
-
 | ------ | -------------- | ------------- |
-
 | GET    | /api/tasks     | Get All Tasks |
-
 | POST   | /api/tasks     | Create Task   |
-
 | PUT    | /api/tasks/:id | Update Task   |
-
 | DELETE | /api/tasks/:id | Delete Task   |
 
+-----------------------------------------------------------------------------------------------------------------
 
-
-\---
-
-
-
-\## ☁️ Deployment
-
-
+## ☁️ Deployment
 
 | Service  | Platform |
-
 | -------- | -------- |
-
 | Frontend | Vercel   |
-
 | Backend  | Render   |
-
 | Database | MySQL    |
 
+-----------------------------------------------------------------------------------------------------------------
 
-
-\---
-
-
-
-\## 📸 Project Highlights
-
-
+## 📸 Project Highlights
 
 ✅ Production-Ready Full Stack Application
 
-
-
 ✅ Secure JWT Authentication
-
-
 
 ✅ RESTful API Architecture
 
-
-
 ✅ Responsive Modern UI
-
-
 
 ✅ Kanban-Based Task Workflow
 
-
-
 ✅ Scalable Backend Structure
-
-
 
 ✅ MySQL Database Integration
 
+✅ Clean Code & Modular Design
 
+------------------------------------------------------------------------------------------------------------------
 
-✅ Clean Code \& Modular Design
+## 👨‍💻 Developer
 
-
-
-\---
-
-
-
-\## 👨‍💻 Developer
-
-
-
-\*\*Janardhan Ulavala\*\*
-
-
+Janardhan Ulavala
 
 LinkedIn:
-
 https://www.linkedin.com/in/ulavala-janardhan-bb1ba1221
 
+------------------------------------------------------------------------------------------------------------------
 
-
-\---
-
-
-
-\## 📄 License
-
-
+## 📄 License
 
 This project was developed for learning purposes, technical assessments, and professional portfolio demonstrations.
-
-
-
