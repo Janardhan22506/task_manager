@@ -76,9 +76,12 @@ const getAuthHeaders = () => {
  * Fetch all tasks for current user
  */
 export const getTasks = async () => {
+    const token = getToken();
     const response = await fetch(`${BASE_URL}/tasks`, {
         method: 'GET',
-        headers: getAuthHeaders(),
+        headers: {
+            'Authorization': token ? `Bearer ${token}` : '',
+        },
     });
     
     const data = await response.json();

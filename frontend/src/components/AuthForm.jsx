@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Lock, User, Eye, EyeOff, Loader2, AlertCircle, CheckCircle2, Zap } from 'lucide-react';
+import { Eye, EyeOff, Loader2, AlertCircle, CheckCircle2, Zap } from 'lucide-react';
 import { loginUser, registerUser, saveToken, saveUser } from '../utils/api';
 
 export default function AuthForm({ onAuthSuccess }) {
@@ -108,32 +108,27 @@ export default function AuthForm({ onAuthSuccess }) {
                         {!isLogin && (
                             <div className="space-y-2">
                                 <label className="text-xs font-semibold tracking-widest text-slate-400 uppercase" htmlFor="full_name">Full Name</label>
-                                <div className="relative">
-                                    <User className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
-                                    <input
-                                        id="full_name" name="full_name" type="text" required
-                                        value={formData.full_name}
-                                        onChange={handleInputChange}
-                                        placeholder="John Doe"
-                                        className="input-base pl-11"
-                                    />
-                                </div>
+                                <input
+                                    id="full_name" name="full_name" type="text" required
+                                    value={formData.full_name}
+                                    onChange={handleInputChange}
+                                    placeholder="John Doe"
+                                    className="input-base"
+                                />
                             </div>
                         )}
 
                         {/* Email */}
                         <div className="space-y-2">
                             <label className="text-xs font-semibold tracking-widest text-slate-400 uppercase" htmlFor="email">Email</label>
-                            <div className="relative">
-                                <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
-                                <input
-                                    id="email" name="email" type="email" required
-                                    value={formData.email}
-                                    onChange={handleInputChange}
-                                    placeholder="you@example.com"
-                                    className="input-base pl-11"
-                                />
-                            </div>
+                            <input
+                                id="email" name="email" type="email" required
+                                value={formData.email}
+                                onChange={handleInputChange}
+                                placeholder="you@example.com"
+                                className="input-base"
+                                autoComplete="off"
+                            />
                         </div>
 
                         {/* Password */}
@@ -143,7 +138,6 @@ export default function AuthForm({ onAuthSuccess }) {
                                 {isLogin && <a href="#forgot" className="text-xs text-indigo-400 hover:text-indigo-300 font-medium">Forgot?</a>}
                             </div>
                             <div className="relative">
-                                <Lock className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
                                 <input
                                     id="password" name="password"
                                     type={showPassword ? 'text' : 'password'}
@@ -151,7 +145,8 @@ export default function AuthForm({ onAuthSuccess }) {
                                     value={formData.password}
                                     onChange={handleInputChange}
                                     placeholder="••••••••"
-                                    className="input-base pl-11 pr-12"
+                                    className="input-base pr-12"
+                                    autoComplete="new-password"
                                 />
                                 <button
                                     type="button"
