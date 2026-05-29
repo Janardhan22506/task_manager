@@ -1,574 +1,186 @@
-\# Task Manager Application
-
-
-
-A full-stack Task Manager application built using React.js for the frontend and Node.js + Express.js for the backend. The application allows users to register, login, and manage tasks across different stages such as Todo, In Progress, and Done.
-
-
-
-\---
-
-
-
-\# Live Demo
-
-
-
-\## Frontend Deployment
-
-
-
-(Add your frontend deployed link here)
-
-
-
-\## Backend Deployment
-
-
-
-(Add your backend deployed link here)
-
-
-
-\---
-
-
-
-\# GitHub Repository
-
-
-
-(Add your GitHub repository link here)
-
-
-
-\---
-
-
-
-\# Tech Stack
-
-
-
-\## Frontend
-
-
-
-\* React.js
-
-\* Vite
-
-\* React Router DOM
-
-\* Axios
-
-\* CSS / Bootstrap
-
-
-
-\## Backend
-
-
-
-\* Node.js
-
-\* Express.js
-
-\* JWT Authentication
-
-\* bcryptjs
-
-
-
-\## Database
-
-
-
-\* MySQL (XAMPP)
-
-
-
-\## API Testing
-
-
-
-\* Postman
-
-
-
-\---
-
-
-
-\# Features
-
-
-
-\## Authentication
-
-
-
-\* User Registration
-
-\* User Login
-
-\* JWT-based Authentication
-
-\* Protected Routes
-
-
-
-\## Task Management
-
-
-
-\* Create Tasks
-
-\* Update Tasks
-
-\* Delete Tasks
-
-\* Change Task Status
-
-\* Separate Task Stages:
-
-
-
-&#x20; \* Todo
-
-&#x20; \* In Progress
-
-&#x20; \* Done
-
-
-
-\## UI Features
-
-
-
-\* Responsive Design
-
-\* Loading States
-
-\* Error Handling
-
-\* Clean Dashboard Layout
-
-
-
-\---
-
-
-
-\# Project Structure
-
-
-
-```plaintext
-
-task\_manager/
-
+🚀 TaskFlow - Premium Task Manager Application
+TaskFlow is a modern full-stack Task Management Kanban application built with a premium React frontend and a scalable Node.js + Express backend powered by MySQL and Sequelize ORM.
+
+The application provides secure JWT authentication, dynamic Kanban task management, task filtering, responsive UI, and real-time workspace statistics.
+
+🌐 Live Demo
+🔗 Frontend (Hosted on Vercel)
+https://task-manager-pi-six.vercel.app
+
+🔗 Backend API (Hosted on Render)
+https://task-manager-3byf.onrender.com
+
+🔗 API Base URL
+https://task-manager-3byf.onrender.com/api/
+
+🔐 Demo Test Credentials
+Use the following credentials to test the application:
+
+Email: development@gmail.com
+Password: development@123
+
+✨ Features
+🔒 Authentication & Security
+User Registration & Login
+JWT Authentication
+Protected API Routes
+Password Encryption using bcryptjs
+Session Persistence using Local Storage
+Secure Authorization Middleware
+
+📋 Task Management System
+🧩 Kanban Workspace
+To Do
+In Progress
+Completed
+
+📊 Dashboard Metrics
+Total Tasks
+Pending Tasks
+Under Review Tasks
+Completed Tasks
+
+⚡ Task Features
+Create Tasks
+Edit Tasks
+Delete Tasks
+Move Tasks Between Columns
+Task Priority Management
+Search Tasks Dynamically
+Filter Tasks by Priority
+
+🎨 Premium Frontend UI
+Fully Responsive Design
+Light Themed Workspace
+Modern Modal System
+Smooth User Experience
+Custom Confirmation Dialogues
+Interactive Board Layout
+
+🛠️ Technology Stack
+Frontend
+React.js
+Vite
+Tailwind CSS
+Lucide React Icons
+Axios
+Backend
+Node.js
+Express.js
+Sequelize ORM
+MySQL
+Authentication & Validation
+JWT (JSON Web Tokens)
+bcryptjs
+express-validator
+
+📂 Project Structure
+task_manager/
 │
-
 ├── backend/
-
 │   ├── config/
-
 │   ├── controllers/
-
 │   ├── middleware/
-
 │   ├── models/
-
 │   ├── routes/
-
 │   ├── utils/
-
 │   ├── server.js
-
 │   └── package.json
-
 │
-
 ├── frontend/
-
 │   ├── public/
-
 │   ├── src/
-
 │   │   ├── assets/
-
 │   │   ├── components/
-
 │   │   ├── pages/
-
 │   │   ├── services/
-
 │   │   └── App.jsx
-
 │   │
-
 │   └── package.json
-
 │
-
 ├── README.md
-
 └── .gitignore
 
-```
+⚙️ Local Development Setup
+📌 Prerequisites
+Make sure the following are installed:
 
+Node.js
+MySQL
+Git
 
-
-\---
-
-
-
-\# Installation \& Setup
-
-
-
-\## Clone Repository
-
-
-
-```bash
-
-git clone <your-repository-link>
-
-cd task\_manager
-
-```
-
-
-
-\---
-
-
-
-\# Backend Setup
-
-
-
-\## Navigate to backend folder
-
-
-
-```bash
-
+🔧 Backend Setup
+1️⃣ Navigate to Backend Folder
 cd backend
-
-```
-
-
-
-\## Install dependencies
-
-
-
-```bash
-
+2️⃣ Install Dependencies
 npm install
-
-```
-
-
-
-\## Create `.env` file
-
-
-
-```env
+3️⃣ Configure Environment Variables
+Create a .env file inside backend folder:
 
 PORT=5000
+NODE_ENV=development
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=
+DB_NAME=task_manager
+DB_PORT=3306
+
+JWT_SECRET=your_jwt_secret_key
 
 
-
-DB\_HOST=localhost
-
-DB\_USER=root
-
-DB\_PASSWORD=
-
-DB\_NAME=task\_manager
-
-
-
-JWT\_SECRET=your\_secret\_key
-
-```
-
-
-
-\## Start backend server
-
-
-
-```bash
-
+4️⃣ Start Backend Server
 npm start
+Backend will run on:
+http://localhost:5000
 
-```
-
-
-
-\---
-
-
-
-\# Frontend Setup
-
-
-
-\## Navigate to frontend folder
-
-
-
-```bash
-
+💻 Frontend Setup
+1️⃣ Navigate to Frontend Folder
 cd frontend
-
-```
-
-
-
-\## Install dependencies
-
-
-
-```bash
-
+2️⃣ Install Dependencies
 npm install
-
-```
-
-
-
-\## Start frontend server
-
-
-
-```bash
-
+3️⃣ Configure Frontend Environment Variables
+Create .env file:
+VITE_API_BASE_URL=http://localhost:5000/api
+4️⃣ Start Frontend Server
 npm run dev
-
-```
-
-
-
-\---
-
-
-
-\# API Endpoints
-
-
-
-\## Authentication APIs
-
-
-
-\### Register User
-
-
-
-```http
-
-POST /api/auth/register
-
-```
-
-
-
-\### Login User
-
-
-
-```http
-
-POST /api/auth/login
-
-```
-
-
-
-\---
-
-
-
-\# Task APIs
-
-
-
-\### Get All Tasks
-
-
-
-```http
-
-GET /api/tasks
-
-```
-
-
-
-\### Create Task
-
-
-
-```http
-
-POST /api/tasks
-
-```
-
-
-
-\### Update Task
-
-
-
-```http
-
-PUT /api/tasks/:id
-
-```
-
-
-
-\### Delete Task
-
-
-
-```http
-
-DELETE /api/tasks/:id
-
-```
-
-
-
-\---
-
-
-
-\# Assumptions
-
-
-
-\* Every user can only manage their own tasks.
-
-\* JWT token is stored on the client side after login.
-
-\* MySQL server is running locally using XAMPP.
-
-\* Backend and frontend are hosted separately.
-
-
-
-\---
-
-
-
-\# Technical Decisions
-
-
-
-\* React.js was chosen for building a responsive and component-based frontend.
-
-\* Express.js was used to create RESTful APIs.
-
-\* JWT authentication was implemented for secure user sessions.
-
-\* MySQL was selected as the relational database for structured task management.
-
-\* Axios was used for API communication between frontend and backend.
-
-
-
-\---
-
-
-
-\# Tradeoffs
-
-
-
-\* Local MySQL setup was used for simplicity during development.
-
-\* Minimal UI animations were implemented to focus on functionality and performance.
-
-\* Redux was not used since Context API/local state management was sufficient for the project scope.
-
-
-
-\---
-
-
-
-\# Future Improvements
-
-
-
-\* Drag and Drop Task Management
-
-\* Task Priority Levels
-
-\* Due Dates \& Notifications
-
-\* Team Collaboration Features
-
-\* Dark Mode
-
-\* File Attachments
-
-\* Real-time Updates using Socket.io
-
-
-
-\---
-
-
-
-\# Deployment Platforms
-
-
-
-\## Frontend
-
-
-
-\* Vercel / Netlify
-
-
-
-\## Backend
-
-
-
-\* Render / Railway
-
-
-
-\---
-
-
-
-\# Author
-
-
-
+Frontend will run on:
+http://localhost:5173
+
+📡 API Endpoints
+🔑 Authentication Routes
+Method	Endpoint	Description
+POST	/api/auth/register	Register User
+POST	/api/auth/login	         Login User
+
+📋 Task Routes
+Method	Endpoint	Description
+GET	/api/tasks	Get All Tasks
+POST	/api/tasks	Create Task
+PUT	/api/tasks/:id	Update Task
+DELETE	/api/tasks/:id	Delete Task
+
+☁️ Deployment
+Frontend Hosting
+Vercel
+Backend Hosting
+Render
+Database
+MySQL
+
+📸 Application Highlights
+Full Stack Production Ready Project
+Clean Code Structure
+REST API Architecture
+Responsive UI Design
+Authentication System
+Real-Time Task Workflow
+Modern Kanban Experience
+
+👨‍💻Aspiring Developer
 Janardhan Ulavala
 
+LinkedIn
+https://www.linkedin.com/in/ulavala-janardhan-bb1ba1221 
 
-
-\* Full Stack Web Developer
-
-\* React.js | Node.js | Express.js | MySQL
-
-
-
-\---
-
-
-
+📄 License
+This project is developed for learning, assessment, and company assignment purposes.
