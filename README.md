@@ -1,186 +1,586 @@
-🚀 TaskFlow - Premium Task Manager Application
-TaskFlow is a modern full-stack Task Management Kanban application built with a premium React frontend and a scalable Node.js + Express backend powered by MySQL and Sequelize ORM.
+\# 🚀 TaskFlow – Premium Task Management Application
 
-The application provides secure JWT authentication, dynamic Kanban task management, task filtering, responsive UI, and real-time workspace statistics.
 
-🌐 Live Demo
-🔗 Frontend (Hosted on Vercel)
+
+TaskFlow is a modern, full-stack Task Management Kanban application designed to streamline task organization and workflow management. Built with a premium React frontend and a scalable Node.js + Express backend, the application delivers a seamless user experience with secure authentication, dynamic task tracking, and real-time productivity insights.
+
+
+
+\---
+
+
+
+\## 🌐 Live Application
+
+
+
+\### Frontend
+
+
+
 https://task-manager-pi-six.vercel.app
 
-🔗 Backend API (Hosted on Render)
+
+
+\### Backend API
+
+
+
 https://task-manager-3byf.onrender.com
 
-🔗 API Base URL
-https://task-manager-3byf.onrender.com/api/
 
-🔐 Demo Test Credentials
-Use the following credentials to test the application:
 
-Email: development@gmail.com
-Password: development@123
+\### API Base URL
 
-✨ Features
-🔒 Authentication & Security
-User Registration & Login
-JWT Authentication
-Protected API Routes
-Password Encryption using bcryptjs
-Session Persistence using Local Storage
-Secure Authorization Middleware
 
-📋 Task Management System
-🧩 Kanban Workspace
-To Do
-In Progress
-Completed
 
-📊 Dashboard Metrics
-Total Tasks
-Pending Tasks
-Under Review Tasks
-Completed Tasks
+https://task-manager-3byf.onrender.com/api
 
-⚡ Task Features
-Create Tasks
-Edit Tasks
-Delete Tasks
-Move Tasks Between Columns
-Task Priority Management
-Search Tasks Dynamically
-Filter Tasks by Priority
 
-🎨 Premium Frontend UI
-Fully Responsive Design
-Light Themed Workspace
-Modern Modal System
-Smooth User Experience
-Custom Confirmation Dialogues
-Interactive Board Layout
 
-🛠️ Technology Stack
-Frontend
-React.js
-Vite
-Tailwind CSS
-Lucide React Icons
-Axios
-Backend
-Node.js
-Express.js
-Sequelize ORM
-MySQL
-Authentication & Validation
-JWT (JSON Web Tokens)
-bcryptjs
-express-validator
+\---
 
-📂 Project Structure
-task_manager/
+
+
+\## 🔐 Demo Credentials
+
+
+
+Use the following credentials to explore the application:
+
+
+
+\*\*Email:\*\* \[development@gmail.com](mailto:development@gmail.com)
+
+
+
+\*\*Password:\*\* development@123
+
+
+
+\---
+
+
+
+\## ✨ Key Features
+
+
+
+\### 🔒 Authentication \& Security
+
+
+
+\* User Registration \& Login
+
+\* JWT Authentication
+
+\* Protected Routes
+
+\* Password Encryption using bcryptjs
+
+\* Secure Authorization Middleware
+
+\* Persistent User Sessions
+
+
+
+\### 📋 Task Management
+
+
+
+\* Create Tasks
+
+\* Edit Tasks
+
+\* Delete Tasks
+
+\* Update Task Status
+
+\* Manage Task Priorities
+
+\* Dynamic Task Search
+
+\* Priority-Based Filtering
+
+
+
+\### 🧩 Kanban Workflow
+
+
+
+Organize tasks efficiently using a drag-and-drop inspired Kanban board:
+
+
+
+\* 📝 To Do
+
+\* 🚧 In Progress
+
+\* ✅ Completed
+
+
+
+\### 📊 Dashboard Analytics
+
+
+
+Track productivity with real-time metrics:
+
+
+
+\* Total Tasks
+
+\* Pending Tasks
+
+\* Tasks Under Review
+
+\* Completed Tasks
+
+
+
+\### 🎨 Modern User Interface
+
+
+
+\* Fully Responsive Design
+
+\* Clean and Professional Layout
+
+\* Modern Modal Components
+
+\* Interactive Kanban Board
+
+\* Smooth User Experience
+
+\* Custom Confirmation Dialogs
+
+
+
+\---
+
+
+
+\## 🛠️ Technology Stack
+
+
+
+\### Frontend
+
+
+
+\* React.js
+
+\* Vite
+
+\* Tailwind CSS
+
+\* Axios
+
+\* Lucide React Icons
+
+
+
+\### Backend
+
+
+
+\* Node.js
+
+\* Express.js
+
+\* Sequelize ORM
+
+\* MySQL
+
+
+
+\### Authentication \& Validation
+
+
+
+\* JSON Web Tokens (JWT)
+
+\* bcryptjs
+
+\* express-validator
+
+
+
+\---
+
+
+
+\## 📁 Project Structure
+
+
+
+```bash
+
+Task\_manager\_app/
+
 │
+
 ├── backend/
+
 │   ├── config/
+
 │   ├── controllers/
+
 │   ├── middleware/
+
 │   ├── models/
+
 │   ├── routes/
+
 │   ├── utils/
+
 │   ├── server.js
+
 │   └── package.json
+
 │
+
 ├── frontend/
+
 │   ├── public/
+
 │   ├── src/
+
 │   │   ├── assets/
+
 │   │   ├── components/
+
 │   │   ├── pages/
+
 │   │   ├── services/
+
 │   │   └── App.jsx
-│   │
+
 │   └── package.json
+
 │
+
 ├── README.md
+
 └── .gitignore
 
-⚙️ Local Development Setup
-📌 Prerequisites
+```
+
+
+
+\---
+
+
+
+\## ⚙️ Local Development Setup
+
+
+
+\### Prerequisites
+
+
+
 Make sure the following are installed:
 
-Node.js
-MySQL
-Git
 
-🔧 Backend Setup
-1️⃣ Navigate to Backend Folder
+
+\* Node.js
+
+\* MySQL
+
+\* Git
+
+
+
+\---
+
+
+
+\### Backend Setup
+
+
+
+\#### 1. Navigate to Backend Directory
+
+
+
+```bash
+
 cd backend
-2️⃣ Install Dependencies
+
+```
+
+
+
+\#### 2. Install Dependencies
+
+
+
+```bash
+
 npm install
-3️⃣ Configure Environment Variables
-Create a .env file inside backend folder:
+
+```
+
+
+
+\#### 3. Configure Environment Variables
+
+
+
+Create a `.env` file inside the backend folder:
+
+
+
+```env
 
 PORT=5000
-NODE_ENV=development
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=
-DB_NAME=task_manager
-DB_PORT=3306
 
-JWT_SECRET=your_jwt_secret_key
+NODE\_ENV=development
 
 
-4️⃣ Start Backend Server
+
+DB\_HOST=localhost
+
+DB\_USER=root
+
+DB\_PASSWORD=
+
+DB\_NAME=task\_manager
+
+DB\_PORT=3306
+
+
+
+JWT\_SECRET=your\_jwt\_secret\_key
+
+```
+
+
+
+\#### 4. Start Backend Server
+
+
+
+```bash
+
 npm start
-Backend will run on:
+
+```
+
+
+
+Backend will run at:
+
+
+
+```text
+
 http://localhost:5000
 
-💻 Frontend Setup
-1️⃣ Navigate to Frontend Folder
+```
+
+
+
+\---
+
+
+
+\### Frontend Setup
+
+
+
+\#### 1. Navigate to Frontend Directory
+
+
+
+```bash
+
 cd frontend
-2️⃣ Install Dependencies
+
+```
+
+
+
+\#### 2. Install Dependencies
+
+
+
+```bash
+
 npm install
-3️⃣ Configure Frontend Environment Variables
-Create .env file:
-VITE_API_BASE_URL=http://localhost:5000/api
-4️⃣ Start Frontend Server
+
+```
+
+
+
+\#### 3. Configure Environment Variables
+
+
+
+Create a `.env` file:
+
+
+
+```env
+
+VITE\_API\_BASE\_URL=http://localhost:5000/api
+
+```
+
+
+
+\#### 4. Start Frontend
+
+
+
+```bash
+
 npm run dev
-Frontend will run on:
+
+```
+
+
+
+Frontend will run at:
+
+
+
+```text
+
 http://localhost:5173
 
-📡 API Endpoints
-🔑 Authentication Routes
-Method	Endpoint	Description
-POST	/api/auth/register	Register User
-POST	/api/auth/login	         Login User
+```
 
-📋 Task Routes
-Method	Endpoint	Description
-GET	/api/tasks	Get All Tasks
-POST	/api/tasks	Create Task
-PUT	/api/tasks/:id	Update Task
-DELETE	/api/tasks/:id	Delete Task
 
-☁️ Deployment
-Frontend Hosting
-Vercel
-Backend Hosting
-Render
-Database
-MySQL
 
-📸 Application Highlights
-Full Stack Production Ready Project
-Clean Code Structure
-REST API Architecture
-Responsive UI Design
-Authentication System
-Real-Time Task Workflow
-Modern Kanban Experience
+\---
 
-👨‍💻Aspiring Developer
-Janardhan Ulavala
 
-LinkedIn
-https://www.linkedin.com/in/ulavala-janardhan-bb1ba1221 
 
-📄 License
-This project is developed for learning, assessment, and company assignment purposes.
+\## 📡 API Endpoints
+
+
+
+\### Authentication
+
+
+
+| Method | Endpoint           | Description   |
+
+| ------ | ------------------ | ------------- |
+
+| POST   | /api/auth/register | Register User |
+
+| POST   | /api/auth/login    | Login User    |
+
+
+
+\### Tasks
+
+
+
+| Method | Endpoint       | Description   |
+
+| ------ | -------------- | ------------- |
+
+| GET    | /api/tasks     | Get All Tasks |
+
+| POST   | /api/tasks     | Create Task   |
+
+| PUT    | /api/tasks/:id | Update Task   |
+
+| DELETE | /api/tasks/:id | Delete Task   |
+
+
+
+\---
+
+
+
+\## ☁️ Deployment
+
+
+
+| Service  | Platform |
+
+| -------- | -------- |
+
+| Frontend | Vercel   |
+
+| Backend  | Render   |
+
+| Database | MySQL    |
+
+
+
+\---
+
+
+
+\## 📸 Project Highlights
+
+
+
+✅ Production-Ready Full Stack Application
+
+
+
+✅ Secure JWT Authentication
+
+
+
+✅ RESTful API Architecture
+
+
+
+✅ Responsive Modern UI
+
+
+
+✅ Kanban-Based Task Workflow
+
+
+
+✅ Scalable Backend Structure
+
+
+
+✅ MySQL Database Integration
+
+
+
+✅ Clean Code \& Modular Design
+
+
+
+\---
+
+
+
+\## 👨‍💻 Developer
+
+
+
+\*\*Janardhan Ulavala\*\*
+
+
+
+LinkedIn:
+
+https://www.linkedin.com/in/ulavala-janardhan-bb1ba1221
+
+
+
+\---
+
+
+
+\## 📄 License
+
+
+
+This project was developed for learning purposes, technical assessments, and professional portfolio demonstrations.
+
+
+
